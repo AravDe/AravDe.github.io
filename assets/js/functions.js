@@ -6,7 +6,7 @@ $( document ).ready(function() {
   var canScroll = true,
       scrollController = null;
   $(this).on('mousewheel DOMMouseScroll', function(e){
-
+    
     if (!($('.outer-nav').hasClass('is-vis'))) {
 
       e.preventDefault();
