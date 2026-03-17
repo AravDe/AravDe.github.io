@@ -1,290 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Arav's Portfolio</title>
-  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HTML5 website template">
-  <meta name="keywords" content="global, template, html, sass, jquery">
-  <meta name="author" content="Bucky Maler">
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96" />  
-  <link rel="icon" type="image/svg+xml" href="/icon/favicon.svg" />
-  <link rel="shortcut icon" href="/icon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Arav" />
-  <link rel="manifest" href="/icon/site.webmanifest" />
+  <meta name="description" content="Arav De — Backend &amp; Full-Stack Engineer. CS &amp; Math at Berea College. Portfolio of projects and experience.">
+  <title>Arav De — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-<!-- notification for small viewports and landscape oriented smartphones -->
-<div class="device-notification">
-  <a class="device-notification--logo" href="">
-    <p>Home</p>
-  </a>
-  <p class="device-notification--message">Please re-orient your device for a better experience.</p>
-</div>
+  <!-- Live Mondrian Canvas Background -->
+  <canvas id="mondrian-canvas"></canvas>
 
-<div class="perspective effect-rotate-left">
-  <div class="container"><div class="outer-nav--return"></div>
-    <div id="viewport" class="l-viewport">
-      <div class="l-wrapper">
-        <header class="header">
-          <a class="header--logo" href="">
-            <p>Home</p>
-          </a>
-          <button class="header--cta cta">View Resume</button>
-          <div class="header--nav-toggle">
-            <span></span>
-          </div>
-        </header>
-        <nav class="l-side-nav">
-          <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
-            <li><span>Projects</span></li>
-            <li><span>About Me</span></li>
-            <li><span>Off Screen</span></li>
-            <li><span>Say Hi</span></li>
-          </ul>
-        </nav>
-        <ul class="l-main-content main-content">
-          <li class="l-section section section--is-active">
-            <div class="intro">
-              <div class="intro--banner">
-                <h1>Hi, I am Arav De</h1>
-                <h2>Software Developer
-                  <br>Computer Science and Mathematics Major
-                  <br>Junior, May 26' 
-                  <a class = "school-name" href = "https://www.berea.edu" target="_blank"> 
-                    <p> Berea College </p> 
-                  </a>
-                </h2>
-                </h1>
-                <button class="cta">View Resume
-                  <span class="btn-background"></span>
-                </button>
-              <h2><p>My Projects</p></h2>
-                <img src="assets/img/introduction-visual.png" alt="Welcome">
-              </div>
-              <div class="intro--options">
-                <a href="https://github.com/berea-college-csc236/l06-recursive-art-aravl6" target="_blank">
-                  <h3> Mondrian Art </h3>
-                  <p>Using Python, Tkinter and Co-ordinate Geometry to make Mondrian art</p>
-                </a>
-                <a href="https://github.com/Berea-College-CSC-226/p01-final-project-aravd" target="_blank">
-                  <h3>Turtle Escapade</h3>
-                  <p>Built a engaging turtle game with self made graphics and friendly user interface within one day</p>
-                </a>
-                <a href"https://github.com/AravDe/FacialRecognition" target="_blank">
-                  <h3>Facial Recognition System</h3>
-                  <p>Trained a ML model to develope a facial recognition system using OpenCV and Python</p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="work">
-              <h2>Selected work</h2>
-              <div class="work--lockup">
-                <ul class="slider">
-                  <li class="slider--item slider--item-left">
-                    <a href="#0" target="">
-                      <div class="slider--item-image">
-                        <img src="assets/img/Project - Mondrian Art.jpg" alt="Mondrian">
-                      </div>
-                      <p class="slider--item-title">Mondrian Art</p>
-                      <i class = "fas fa-python"></i>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-center">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
-                      </div>
-                      <p class="slider--item-title">Metiew &amp; Smith</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">Alex Nowak</p>
-                      <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                    </a>
-                  </li>
-                </ul>
-                <div class="slider--prev">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
-                  </g>
-                  </svg>
-                </div>
-                <div class="slider--next">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="about">
-              <div class="about--banner">
-                <h2>We<br>believe in<br>passionate<br>people</h2>
-                <a href="#0">Career
-                  <span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                    </g>
-                    </svg>
-                  </span>
-                </a>
-                <img src="assets/img/about-visual.png" alt="About Us">
-              </div>
-              <div class="about--options">
-                <a href="#0">
-                  <h3>Winners</h3>
-                </a>
-                <a href="#0">
-                  <h3>Philosophy</h3>
-                </a>
-                <a href="#0">
-                  <h3>History</h3>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="contact">
-              <div class="contact--lockup">
-                <div class="modal">
-                  <div class="modal--information">
-                    <p>Pawia 5, 31-154 Kraków, Poland</p>
-                    <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
-                    <a href="tel:+148126287560">+48 12 628 75 60</a>
-                  </div>
-                  <ul class="modal--options">
-                    <li><a href="#0">Bēhance</a></li>
-                    <li><a href="#0">dribbble</a></li>
-                    <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="hire">
-              <h2>You want us to do</h2>
-              <!-- checkout formspree.io for easy form setup -->
-              <form class="work-request">
-                <div class="work-request--options">
-                  <span class="options-a">
-                    <input id="opt-1" type="checkbox" value="app design">
-                    <label for="opt-1">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      App Design
-                    </label>
-                    <input id="opt-2" type="checkbox" value="graphic design">
-                    <label for="opt-2">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Graphic Design
-                    </label>
-                    <input id="opt-3" type="checkbox" value="motion design">
-                    <label for="opt-3">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Motion Design
-                    </label>
-                  </span>
-                  <span class="options-b">
-                    <input id="opt-4" type="checkbox" value="ux design">
-                    <label for="opt-4">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      UX Design
-                    </label>
-                    <input id="opt-5" type="checkbox" value="webdesign">
-                    <label for="opt-5">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Webdesign
-                    </label>
-                    <input id="opt-6" type="checkbox" value="marketing">
-                    <label for="opt-6">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                      </g>
-                      </svg>
-                      Marketing
-                    </label>
-                  </span>
-                </div>
-                <div class="work-request--information">
-                  <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <input type="submit" value="Send Request">
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
+  <!-- Overlay to soften/dim the Mondrian -->
+  <div id="overlay"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-brand">AD</div>
+    <div class="nav-links">
+      <a href="#hero"       class="nav-link active" data-section="0">Home</a>
+      <a href="#experience" class="nav-link"         data-section="1">Experience</a>
+      <a href="#projects"   class="nav-link"         data-section="2">Projects</a>
+      <a href="#contact"    class="nav-link"         data-section="3">Contact</a>
     </div>
+  </nav>
+
+  <!-- Page Sections -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+      <div class="section-inner hero-inner">
+        <div class="hero-tag">Backend &amp; Full-Stack Engineer</div>
+        <h1 class="hero-title">Arav<br><span class="highlight">De</span></h1>
+        <p class="hero-sub">CS &amp; Math @ Berea College · Building AI-powered systems,<br>event-driven architectures, and things that matter.</p>
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-primary" id="cta-experience">View My Work</a>
+          <a href="#contact"    class="btn btn-ghost"   id="cta-contact">Get In Touch</a>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="section-inner wide-inner">
+        <h2 class="section-title">Experience</h2>
+        <div class="cards-grid">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-dot" style="background:#E8192C;"></div>
+            </div>
+            <h3 class="card-title">Backend Engineering Intern</h3>
+            <p class="card-company">NextGen Justice · San Jose, CA</p>
+            <p class="card-desc">Engineered core features for a legal-tech prototype, adding AI-driven workflows that reduced manual document review by an estimated 60%. Consolidated 8 redundant Node.js APIs into 1 microservice for 20% faster data retrieval, migrated storage to AWS S3 cutting costs by 50%, and automated Docker deployments via GitHub Actions improving deploy speed by 80%.</p>
+            <div class="card-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">NestJS</span>
+              <span class="tag">Langchain</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-dot" style="background:#F5C518;"></div>
+            </div>
+            <h3 class="card-title">Full-Stack SWE Intern</h3>
+            <p class="card-company">Berea College CS Dept · Berea, KY</p>
+            <p class="card-desc">Built and maintained a faculty-facing web app tracking student stats, background checks, and volunteer sign-ups for 1,500+ active users. Optimised Peewee ORM queries to cut page-load latency by 66% (15s → 5s) and implemented 20+ Pytest suites ensuring 99% uptime.</p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Pytest</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-dot" style="background:#0F9D58;"></div>
+            </div>
+            <h3 class="card-title">Full Stack SWE</h3>
+            <p class="card-company">A Fresh Page LLC · Berea, KY</p>
+            <p class="card-desc">Architected a PostgreSQL database schema using Peewee, optimizing data management by 40% for a food bank connectivity platform. Spearheaded the full-stack development of a dynamic website supporting 1,000+ users, streamlining operations by 35%.</p>
+            <div class="card-tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Peewee</span>
+              <span class="tag">Full-Stack</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-dot" style="background:#1E3F9E;"></div>
+            </div>
+            <h3 class="card-title">Teaching Assistant</h3>
+            <p class="card-company">Berea College CS Dept · Software Design &amp; Data Structures</p>
+            <p class="card-desc">Mentored 30+ students in C++, data structures, and OOP, contributing to a 10% rise in average scores through targeted code reviews. Developed visual aids to teach core Git workflows including branching, merging, and pull requests.</p>
+            <div class="card-tags">
+              <span class="tag">C++</span>
+              <span class="tag">DSA</span>
+              <span class="tag">OOP</span>
+              <span class="tag">Git</span>
+              <span class="tag">Mentoring</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Experience Timeline -->
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          <div class="timeline-grid">
+            <div class="timeline-node-wrapper">
+              <div class="timeline-node" style="border: 2px solid #E8192C;"></div>
+              <span class="timeline-date">Jun 2025 — Aug 2025</span>
+            </div>
+            <div class="timeline-node-wrapper">
+              <div class="timeline-node" style="border: 2px solid #F5C518;"></div>
+              <span class="timeline-date">Jun 2024 — Aug 2024</span>
+            </div>
+            <div class="timeline-node-wrapper">
+              <div class="timeline-node" style="border: 2px solid #0F9D58;"></div>
+              <span class="timeline-date">Jan 2024 — May 2024</span>
+            </div>
+            <div class="timeline-node-wrapper">
+              <div class="timeline-node" style="border: 2px solid #1E3F9E;"></div>
+              <span class="timeline-date">Aug 2023 — May 2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-inner wide-inner">
+        <h2 class="section-title">Projects</h2>
+        <div class="cards-grid">
+
+          <div class="card card-featured">
+            <div class="card-header">
+              <div class="card-dot" style="background:#E8192C;"></div>
+            </div>
+            <h3 class="card-title">TrueView</h3>
+            <p class="card-company">Python · FastAPI · React · OpenCV · Gemini · Redis</p>
+            <p class="card-desc">Real-time Explainable AI media verification pipeline. Integrates the AIorNot API for deepfake detection and a custom OpenCV engine for feature extraction. Parallelised I/O with Python asyncio and Redis caching for maximum throughput.</p>
+            <div class="card-tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Asyncio</span>
+            </div>
+            <a href="https://github.com/AravDe/TrueView" target="_blank" rel="noopener" class="btn-card">GitHub Repo ↗</a>
+          </div>
+
+          <div class="card card-featured">
+            <div class="card-header">
+              <div class="card-dot" style="background:#1E3F9E;"></div>
+            </div>
+            <h3 class="card-title">Berea MarketPlace</h3>
+            <p class="card-company">Python · Flask · RabbitMQ · PostgreSQL · Gemini Agent</p>
+            <p class="card-desc">Event-driven campus marketplace replacing a noisy group chat. Uses RabbitMQ for async messaging, a Gemini AI agent for smart item matching, and prioritises personal privacy throughout. Architected with microservices from the ground up.</p>
+            <div class="card-tags">
+              <span class="tag">Flask</span>
+              <span class="tag">RabbitMQ</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">Microservices</span>
+            </div>
+            <a href="https://github.com/AravDe/BereaMarketPlace" target="_blank" rel="noopener" class="btn-card">GitHub Repo ↗</a>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-dot" style="background:#F5C518;"></div>
+            </div>
+            <h3 class="card-title">Mondrian Art Generator</h3>
+            <p class="card-company">Python · Tkinter · Recursion</p>
+            <p class="card-desc">A recursive art generator creating compositions in the style of Piet Mondrian — reimplemented live in JS as the very background you're looking at right now.</p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Tkinter</span>
+              <span class="tag">Recursion</span>
+              <span class="tag">Generative Art</span>
+            </div>
+            <a href="https://github.com/AravDe/Mondrian_Art_Generator" target="_blank" rel="noopener" class="btn-card">GitHub Repo ↗</a>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: flex-start; padding: 1rem;">
+            <a href="projects.html" class="btn btn-ghost">View All Projects &rarr;</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-inner contact-inner">
+        <h2 class="section-title">Let's Talk</h2>
+        <p class="contact-sub">I'm always open to new opportunities, collaborations, or just a good conversation about
+          technology.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <a href="mailto:dearav3@gmail.com" class="btn btn-primary btn-large"
+            id="email-btn">dearav3@gmail.com</a>
+          <a href="https://github.com/AravDe" target="_blank" rel="noopener" class="btn btn-ghost btn-large"
+            id="github-link">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scroll progress indicator -->
+  <div id="progress-bar"></div>
+
+  <!-- Section dots -->
+  <div id="section-dots">
+    <button class="dot active" data-section="0" aria-label="Go to Hero"></button>
+    <button class="dot" data-section="1" aria-label="Go to Experience"></button>
+    <button class="dot" data-section="2" aria-label="Go to Projects"></button>
+    <button class="dot" data-section="3" aria-label="Go to Contact"></button>
   </div>
-  <ul class="outer-nav">
-    <li class="is-active">Home</li>
-    <li>Works</li>
-    <li>About</li>
-    <li>Contact</li>
-    <li>Hire us</li>
-  </ul>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="assets/js/functions-min.js"></script>
+  <script src="mondrian.js"></script>
+  <script src="portfolio.js"></script>
 </body>
-</html>
 
+</html>
