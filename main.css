@@ -238,7 +238,7 @@ body {
 
 .hero-sub {
   font-size: 1.05rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.7;
   max-width: 480px;
   margin-bottom: 2.5rem;
@@ -358,7 +358,7 @@ body {
   cursor: pointer;
   z-index: 20;
   transition: all var(--transition);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-nav:hover {
@@ -471,7 +471,7 @@ body {
   height: 18px;
   border-radius: 50%;
   margin: 0 auto;
-  box-shadow: 0 0 0 6px var(--bg-dark), 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 6px var(--bg-dark), 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: transform var(--transition);
 }
 
@@ -621,7 +621,7 @@ body {
 
 .contact-sub {
   font-size: 1rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -824,7 +824,7 @@ body.scrollable-page .section {
     mask-image: none;
     -webkit-mask-image: none;
   }
-  
+
   .cards-grid::-webkit-scrollbar {
     display: none;
   }
@@ -832,7 +832,7 @@ body.scrollable-page .section {
   .carousel-nav {
     display: none;
   }
-  
+
   .card {
     width: clamp(260px, 78vw, 360px);
     padding: 1.5rem;
@@ -859,7 +859,7 @@ body.scrollable-page .section {
     font-size: 0.7rem;
     padding: 0.2rem 0.6rem;
   }
-  
+
 
   #section-dots {
     right: 1rem;
