@@ -465,6 +465,14 @@ body {
   transition: color var(--transition);
 }
 
+.card-date-mobile {
+  display: none;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .card-link:hover {
   color: var(--mondrian-yellow);
 }
@@ -692,11 +700,23 @@ body.scrollable-page .section {
    ============================================= */
 @media (max-width: 768px) {
   #navbar {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
   .nav-links {
-    gap: 1.2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .timeline-wrapper {
+    display: none;
+  }
+
+  .card-date-mobile {
+    display: inline-block;
   }
 
   .section-inner {
