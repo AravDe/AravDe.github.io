@@ -41,6 +41,7 @@
         });
         setTimeout(() => {
             applyStyle(el, { pointerEvents: 'all', transition: '' });
+            updateAllCarousels();
         }, DURATION);
     }
 
@@ -141,45 +142,61 @@
     });
 
     // ── Carousel Navigation ───────────────────────────────────────────
-    const carouselWrappers = document.querySelectorAll('.carousel-wrapper');
-    carouselWrappers.forEach(wrapper => {
-        const grid = wrapper.querySelector('.cards-grid');
-        const prevBtn = wrapper.querySelector('.carousel-nav.prev');
-        const nextBtn = wrapper.querySelector('.carousel-nav.next');
+    function initCarousels() {
+        const carouselWrappers = document.querySelectorAll('.carousel-wrapper');
+        carouselWrappers.forEach(wrapper => {
+            const grid = wrapper.querySelector('.cards-grid');
+            const prevBtn = wrapper.querySelector('.carousel-nav.prev');
+            const nextBtn = wrapper.querySelector('.carousel-nav.next');
 
-        if (!grid || !prevBtn || !nextBtn) return;
+            if (!grid || !prevBtn || !nextBtn) return;
 
-        // Scroll by roughly one card width + gap
-        const getScrollAmount = () => {
-            const card = grid.querySelector('.card');
-            return card ? card.offsetWidth + 24 : 400;
-        };
+            // Scroll by roughly one card width + gap
+            const getScrollAmount = () => {
+                const card = grid.querySelector('.card');
+                return card ? card.offsetWidth + 24 : 400;
+            };
 
-        nextBtn.addEventListener('click', () => {
-            grid.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+            nextBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+            });
+
+            // Toggle button visibility based on scroll position
+            grid._updateButtons = () => {
+                // If the section is hidden, we can't calculate correctly
+                if (grid.offsetWidth === 0) return;
+
+                const isAtStart = grid.scrollLeft <= 10;
+                const isAtEnd = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 10;
+                
+                prevBtn.style.opacity = isAtStart ? '0' : '1';
+                prevBtn.style.pointerEvents = isAtStart ? 'none' : 'all';
+                
+                nextBtn.style.opacity = isAtEnd ? '0' : '1';
+                nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'all';
+            };
+
+            grid.addEventListener('scroll', grid._updateButtons);
+            // Initial check for carousels that might be visible immediately
+            grid._updateButtons();
         });
+    }
 
-        prevBtn.addEventListener('click', () => {
-            grid.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    function updateAllCarousels() {
+        document.querySelectorAll('.cards-grid').forEach(grid => {
+            if (grid._updateButtons) grid._updateButtons();
         });
+    }
 
-        // Toggle button visibility based on scroll position
-        const updateButtons = () => {
-            const isAtStart = grid.scrollLeft <= 10;
-            const isAtEnd = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 10;
-            
-            prevBtn.style.opacity = isAtStart ? '0' : '1';
-            prevBtn.style.pointerEvents = isAtStart ? 'none' : 'all';
-            
-            nextBtn.style.opacity = isAtEnd ? '0' : '1';
-            nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'all';
-        };
-
-        grid.addEventListener('scroll', updateButtons);
-        // Initial check after a short delay for layout to settle
-        window.addEventListener('load', updateButtons);
-        setTimeout(updateButtons, 500);
-    });
+    initCarousels();
+    window.addEventListener('resize', updateAllCarousels);
+    window.addEventListener('load', updateAllCarousels);
+    // Also update after a short delay to ensure layout has settled
+    setTimeout(updateAllCarousels, 1000);
 
     // ── Init ────────────────────────────────────────────────────────
     function init() {
@@ -200,6 +217,7 @@
         });
 
         updateUI();
+        updateAllCarousels();
     }
 
     init();

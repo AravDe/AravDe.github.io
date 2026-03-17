@@ -25,7 +25,7 @@
 
   <!-- Navigation -->
   <nav id="navbar">
-    <div class="nav-brand">AD</div>
+    <div class="nav-brand"> <a href="#hero" class="nav-link" data-section="0">AD</a></div>
     <div class="nav-links">
       <a href="#hero" class="nav-link active" data-section="0">Home</a>
       <a href="#experience" class="nav-link" data-section="1">Experience</a>
@@ -129,7 +129,8 @@
               <h3 class="card-title">Teaching Assistant</h3>
               <p class="card-company">Berea College CS Dept · Software Design &amp; Data Structures</p>
               <p class="card-desc">Mentored 30+ students in C++, data structures, and OOP, contributing to a 10% rise in
-                average scores through targeted code reviews. Developed visual aids to teach core Git workflows including
+                average scores through targeted code reviews. Developed visual aids to teach core Git workflows
+                including
                 branching, merging, and pull requests.</p>
               <div class="card-tags">
                 <span class="tag">C++</span>
@@ -183,10 +184,9 @@
                 <div class="card-dot" style="background:#E8192C;"></div>
               </div>
               <h3 class="card-title">TrueView</h3>
-              <p class="card-company">Python · FastAPI · React · OpenCV · Gemini · Redis</p>
               <p class="card-desc">Real-time Explainable AI media verification pipeline. Integrates the AIorNot API for
-                deepfake detection and a custom OpenCV engine for feature extraction. Parallelised I/O with Python asyncio
-                and Redis caching for maximum throughput.</p>
+                deepfake detection and a custom OpenCV engine for feature extraction. Parallelised I/O with Python
+                asyncio and Redis caching for maximum throughput.</p>
               <div class="card-tags">
                 <span class="tag">FastAPI</span>
                 <span class="tag">React</span>
@@ -204,7 +204,6 @@
                 <div class="card-dot" style="background:#1E3F9E;"></div>
               </div>
               <h3 class="card-title">Berea MarketPlace</h3>
-              <p class="card-company">Python · Flask · RabbitMQ · PostgreSQL · Gemini Agent</p>
               <p class="card-desc">Event-driven campus marketplace replacing a noisy group chat. Uses RabbitMQ for async
                 messaging, a Gemini AI agent for smart item matching, and prioritises personal privacy throughout.
                 Architected with microservices from the ground up.</p>
@@ -215,8 +214,8 @@
                 <span class="tag">Gemini</span>
                 <span class="tag">Microservices</span>
               </div>
-              <a href="https://github.com/AravDe/BereaMarketPlace" target="_blank" rel="noopener" class="btn-card">GitHub
-                Repo ↗</a>
+              <a href="https://github.com/AravDe/BereaMarketPlace" target="_blank" rel="noopener"
+                class="btn-card">GitHub Repo ↗</a>
             </div>
 
             <div class="card">
@@ -224,7 +223,6 @@
                 <div class="card-dot" style="background:#F5C518;"></div>
               </div>
               <h3 class="card-title">Mondrian Art Generator</h3>
-              <p class="card-company">Python · Tkinter · Recursion</p>
               <p class="card-desc">A recursive art generator creating compositions in the style of Piet Mondrian,
                 reimplemented live in JS as the very background you're looking at right now. One of my first coding
                 projects!</p>
@@ -238,18 +236,49 @@
                 class="btn-card">GitHub Repo ↗</a>
             </div>
 
-            <div style="display: flex; align-items: center; justify-content: flex-start; padding: 1rem;">
-              <a href="projects.html" class="btn btn-ghost">View All Projects &rarr;</a>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-dot" style="background:#E8192C;"></div>
+              </div>
+              <h3 class="card-title">JS Interpreter</h3>
+              <p class="card-desc">A hand-built interpreter for a subset of JavaScript, written in Python. Supports
+                variables, loops (while/for/do-while), conditionals, functions with local scope and recursion, I/O, and
+                basic primitive types — plus async/await as an extended goal.</p>
+              <div class="card-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Interpreters</span>
+                <span class="tag">Compilers</span>
+                <span class="tag">AST</span>
+              </div>
+              <a href="https://github.com/AravDe/Js_Interpreter" target="_blank" rel="noopener" class="btn-card">GitHub
+                Repo ↗</a>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="card-dot" style="background:#1E3F9E;"></div>
+              </div>
+              <h3 class="card-title">Custom Browser Homepage</h3>
+              <p class="card-desc">A Chrome/Brave extension replacing the new-tab page with a unified dashboard.
+                Features
+                file-explorer bookmark management, drag-and-drop, colour-coded folders, instant search, glassmorphism
+                UI,
+                and dynamic nature backgrounds.</p>
+              <div class="card-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Chrome Extension</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">Glassmorphism</span>
+              </div>
+              <a href="https://github.com/AravDe/CustomBrowserHomepage" target="_blank" rel="noopener"
+                class="btn-card">GitHub Repo ↗</a>
             </div>
 
           </div>
           <button class="carousel-nav next" aria-label="Next">&rarr;</button>
         </div>
-
       </div>
     </section>
-
-    <!-- Contact Section -->
     <section id="contact" class="section">
       <div class="section-inner contact-inner">
         <h2 class="section-title">Let's Talk</h2>
