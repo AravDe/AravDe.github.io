@@ -325,7 +325,7 @@ body {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 1.5rem;
+  gap: clamp(1rem, 2.5vw, 2rem);
   padding: 1rem 5% 2rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -377,13 +377,14 @@ body {
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
   border-radius: 12px;
-  padding: 2.25rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
   border: 1px solid var(--glass-border);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
-  flex: 0 0 380px;
+  width: clamp(300px, 28vw, 450px);
+  flex-shrink: 0;
   scroll-snap-align: center;
 }
 
@@ -831,7 +832,7 @@ body.scrollable-page .section {
   }
   
   .card {
-    width: clamp(280px, 82vw, 400px);
+    width: clamp(260px, 78vw, 360px);
     padding: 1.5rem;
     scroll-snap-align: center;
     flex-shrink: 0;
