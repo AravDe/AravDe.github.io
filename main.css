@@ -152,6 +152,27 @@ body {
 }
 
 /* =============================================
+   SCROLLABLE PAGE OVERRIDES (for subpages)
+   ============================================= */
+.scrollable-page {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scrollable-page #main-content {
+  position: relative;
+  overflow: visible;
+  z-index: 10;
+}
+
+.scrollable-page .section {
+  position: static;
+  display: block;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* =============================================
    SECTIONS
    ============================================= */
 .section {
@@ -724,8 +745,28 @@ body.scrollable-page .section {
   }
 
   .cards-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    scroll-padding-left: 1.5rem;
+    /* Hide scrollbars but allow native scroll */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
+  
+  .cards-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    min-width: 85vw;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  
 
   #section-dots {
     right: 1rem;

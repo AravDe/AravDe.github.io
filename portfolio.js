@@ -106,12 +106,22 @@
 
     // Touch swipe
     let touchStartY = null;
-    window.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; }, { passive: true });
+    let touchStartX = null;
+    window.addEventListener('touchstart', e => { 
+        touchStartY = e.touches[0].clientY; 
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
     window.addEventListener('touchend', e => {
-        if (touchStartY === null) return;
+        if (touchStartY === null || touchStartX === null) return;
         const dy = touchStartY - e.changedTouches[0].clientY;
-        if (Math.abs(dy) > 40) goTo(dy > 0 ? current + 1 : current - 1);
+        const dx = touchStartX - e.changedTouches[0].clientX;
+        
+        // Only trigger vertical navigation if the swipe is vertical-dominant
+        if (Math.abs(dy) > 40 && Math.abs(dy) > Math.abs(dx)) {
+            goTo(dy > 0 ? current + 1 : current - 1);
+        }
         touchStartY = null;
+        touchStartX = null;
     });
 
     // Nav links
@@ -120,8 +130,8 @@
     });
 
     // Hero CTA buttons
-    const ctaExp = document.getElementById('cta-experience');
-    if (ctaExp) ctaExp.addEventListener('click', e => { e.preventDefault(); goTo(1); });
+    const ctaProjects = document.getElementById('cta-projects');
+    if (ctaProjects) ctaProjects.addEventListener('click', e => { e.preventDefault(); goTo(2); });
     const ctaContact = document.getElementById('cta-contact');
     if (ctaContact) ctaContact.addEventListener('click', e => { e.preventDefault(); goTo(3); });
 
