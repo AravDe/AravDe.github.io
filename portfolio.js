@@ -140,6 +140,47 @@
         dot.addEventListener('click', () => goTo(parseInt(dot.dataset.section, 10)));
     });
 
+    // ── Carousel Navigation ───────────────────────────────────────────
+    const carouselWrappers = document.querySelectorAll('.carousel-wrapper');
+    carouselWrappers.forEach(wrapper => {
+        const grid = wrapper.querySelector('.cards-grid');
+        const prevBtn = wrapper.querySelector('.carousel-nav.prev');
+        const nextBtn = wrapper.querySelector('.carousel-nav.next');
+
+        if (!grid || !prevBtn || !nextBtn) return;
+
+        // Scroll by roughly one card width + gap
+        const getScrollAmount = () => {
+            const card = grid.querySelector('.card');
+            return card ? card.offsetWidth + 24 : 400;
+        };
+
+        nextBtn.addEventListener('click', () => {
+            grid.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            grid.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        });
+
+        // Toggle button visibility based on scroll position
+        const updateButtons = () => {
+            const isAtStart = grid.scrollLeft <= 10;
+            const isAtEnd = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 10;
+            
+            prevBtn.style.opacity = isAtStart ? '0' : '1';
+            prevBtn.style.pointerEvents = isAtStart ? 'none' : 'all';
+            
+            nextBtn.style.opacity = isAtEnd ? '0' : '1';
+            nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'all';
+        };
+
+        grid.addEventListener('scroll', updateButtons);
+        // Initial check after a short delay for layout to settle
+        window.addEventListener('load', updateButtons);
+        setTimeout(updateButtons, 500);
+    });
+
     // ── Init ────────────────────────────────────────────────────────
     function init() {
         // First hide ALL sections
