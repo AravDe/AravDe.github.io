@@ -136,6 +136,10 @@
     const ctaContact = document.getElementById('cta-contact');
     if (ctaContact) ctaContact.addEventListener('click', e => { e.preventDefault(); goTo(3); });
 
+    // Navbar Brand link
+    const brandLink = document.getElementById('brand-link');
+    if (brandLink) brandLink.addEventListener('click', e => { e.preventDefault(); goTo(0); });
+
     // Section dots
     dots.forEach(dot => {
         dot.addEventListener('click', () => goTo(parseInt(dot.dataset.section, 10)));
